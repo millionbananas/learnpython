@@ -4,7 +4,6 @@
 # Generate prime numbers until
 # the user chooses to stop
 
-
 def isPrime(x):
     """
     Checks whether the given
