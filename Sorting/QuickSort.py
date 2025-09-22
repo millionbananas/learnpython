@@ -12,7 +12,6 @@ def _inPlaceQuickSort(A,start,end):
         temp=A[end]
         A[end]=pivot
         pivot=temp
-        
         p,count= _inPlacePartition(A,start,end)
         count += _inPlaceQuickSort(A,start,p-1)
         count += _inPlaceQuickSort(A,p+1,end)
