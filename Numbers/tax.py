@@ -16,14 +16,13 @@ def calcTax(cost, country='hungary'):
     return tax
 
 def main(): # Wrapper function
-
     tax = calcTax(int(input('What was the cost of your purchase? ')),
     input('Which country are you in? '))
 
     if type(tax) == str:
-    	print(tax)
+         print(tax)
     else:
     	print('The tax on your purchase was:', tax)
 
 if __name__ == '__main__':
- 	main()
+    main()
