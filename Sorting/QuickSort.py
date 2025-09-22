@@ -65,6 +65,6 @@ r = float(len(M)-1)
 i = 0
 while i < (math.log(r,2)):
     z = _inPlaceQuickSort(M,0,pow(2,i)-1) # taking 0, 2 , 4, 8, 16 .... elements in succesion and printing the number of comparisons
-    print("No of Comprisons for %d elements is %d"%(pow(2,i)-1,z))
+    print("No of Comparisons for %d elements is %d"%(pow(2,i)-1,z))
     i += 1
  
