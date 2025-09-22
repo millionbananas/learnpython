@@ -10,8 +10,8 @@ def _inPlaceQuickSort(A,start,end):
     if start<end:
         pivot=random.gauss(0,1)
         temp=A[end]
-        A[end]=A[pivot]
-        A[pivot]=temp
+        A[end]=pivot
+        pivot=temp
         
         p,count= _inPlacePartition(A,start,end)
         count += _inPlaceQuickSort(A,start,p-1)
@@ -23,10 +23,10 @@ def _inPlacePartition(A,start,end):
     count = 0
     pivot= random.gauss(0,1)
     temp=A[end]
-    A[end]=A[pivot]
-    A[pivot]=temp
+    A[end]=pivot
+    pivot=temp
     newPivotIndex=start-1
-    for index in xrange(start,end):
+    for index in range(start,end):
                
         count += 1
         if A[index]<A[end]:#check if current val is less than pivot value
@@ -51,7 +51,7 @@ X = np.random.normal(mu, sigma, p)
 np.save(outfile, X)
 print(X)
 
-count, bins, ignored = plt.hist(X, 30, normed=True)
+count, bins, ignored = plt.hist(X, 30)
 
 plt.plot(bins , 1/(sigma * np.sqrt(2 * np.pi)) *np.exp( - (bins - mu)**2 / (2 * sigma**2) ),linewidth=2, color='r')
 plt.show()    
